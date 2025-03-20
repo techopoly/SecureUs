@@ -1,0 +1,140 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: #e9e9e9;
+  padding: 30px;
+  width: 80%;
+  height: 70%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.commentSection {
+  max-height: 400px;
+  margin-top: 20px;
+}
+
+.comments {
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.commenterImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.reply {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.replyButton {
+  background-color: #1877f2;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.replyButton:hover {
+  background-color: #145a8d;
+}
+
+.replyInput {
+  margin-top: 10px;
+}
+
+.replyInput textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.replyInput button {
+  background-color: #1877f2;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.replyInput button:hover {
+  background-color: #145a8d;
+}
+
+.addComment {
+  display: flex;
+  flex-direction: column;
+}
+
+.addComment textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.addComment button {
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.addComment button:hover {
+  background-color: #145a8d;
+}

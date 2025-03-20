@@ -1,0 +1,46 @@
+.header {
+  background-color: #111; /* Dark background similar to YouTube */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Align logo to the left, nav to the center */
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 24px;  /* Font size of the logo */
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px; /* Optional: Adds space between letters */
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Space between each item */
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ff0000; /* Red color on hover (similar to YouTube) */
+}
