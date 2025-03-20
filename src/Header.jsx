@@ -5,7 +5,7 @@ import styles from './Header.module.css';  // Import the CSS module
 const Header = () => {
   return (
     <header className={styles.header}> {/* Apply header styles */}
-      <div className={styles.logo}>SecureUs</div> {/* Logo Text */}
+      <div className={styles.logo}><Link className={styles.logo} to="/">SecureUs</Link></div> {/* Logo Text */}
       <nav className={styles.nav}>
         <ul>
           <li><Link to="/" className={styles.navLink}>Video</Link></li> {/* Link to VideoList */}

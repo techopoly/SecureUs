@@ -13,6 +13,7 @@
   font-weight: bold;
   color: #fff;
   letter-spacing: 2px; /* Optional: Adds space between letters */
+  text-decoration: none;
 }
 
 .nav {
