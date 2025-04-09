@@ -1,0 +1,194 @@
+.forumPage {
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1c1e21;
+    margin-bottom: 20px;
+  }
+  
+  .createPost {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .createPost h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .input, .textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .textarea {
+    height: 150px;
+  }
+  
+  .fileInput {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  
+  .createButton {
+    background-color: #1877f2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+  
+  .createButton:hover {
+    background-color: #145a8d;
+  }
+  
+  .postList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .postCard {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin-bottom: 20px;
+  }
+  
+  .postCard:hover {
+    transform: scale(1.02);
+  }
+  
+  .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .userProfilePic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .userDetails {
+    font-size: 14px;
+  }
+  
+  .userName {
+    font-weight: bold;
+    color: #1877f2;
+  }
+  
+  .postTime {
+    color: #666;
+  }
+  
+  .postOptions {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .postTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1877f2;
+    margin-bottom: 10px;
+  }
+  
+  .postContent {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .postImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .postActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .actionButton {
+    background-color: #6a6a6a;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .actionButton:hover {
+    background-color: #e4e6eb;
+  }
+  
+  .comments {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .comment {
+    margin: 5px 0;
+  }
+  
+  .moreComments {
+    color: #1877f2;
+    cursor: pointer;
+  }
+  
+  .moreButton {
+    background-color: #1877f2;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .moreButton:hover {
+    background-color: #145a8d;
+  }
+  

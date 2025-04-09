@@ -1,0 +1,118 @@
+.videoContainer {
+  position: relative;
+  width: 22%; /* Adjusted width for each video */ 
+  height: 100%; /* Ensure full height */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #0b0101;
+  cursor: pointer;
+  margin: 1%; 
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding-top: 100%;
+  padding-left: 10%;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.modalVideo {
+  width: 100%;
+  height: 450px; /* Adjust height for the modal */
+}
+
+.videoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.categoryContainer {
+  border-bottom: .1px solid #767676;
+  /* margin-bottom: 50px; */
+  padding-bottom: 20px;
+}
+
+.categoryTitle {
+  font-size: 18px; /* Adjust the font size to match YouTube title size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Slightly smaller margin */
+  text-align: left; /* Align to the left side */
+  padding-left: 15px; /* Add padding for some space from the left edge */
+  font-family: 'Roboto', sans-serif; /* Optional: Use a similar font like YouTube */
+}
+
+
+/* Background color for the category */
+.categoryBackground {
+  background-color: #ffffff;  /* Light background for category */
+  /* padding: 30px; */
+  border-radius: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .videoContainer {
+    width: 22%; /* Adjusted for larger screen */
+  }
+}
+
+@media (max-width: 992px) {
+  .videoContainer {
+    width: 28%;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoContainer {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoContainer {
+    width: 90%;
+  }
+}
