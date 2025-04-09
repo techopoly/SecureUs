@@ -1,0 +1,48 @@
+.landingPage {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4; /* Light gray background */
+    min-height: 100vh;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .content {
+    font-size: 18px;
+    color: #444;
+    margin-top: 30px;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    background-color: #1877f2;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #145a8d;
+  }
+  
