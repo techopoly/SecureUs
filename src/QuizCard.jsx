@@ -16,6 +16,7 @@ const QuizCard = ({ quiz, score, progress }) => {
         ></div>
       </div>
       <Link to={`/quiz/${quiz.id}`} className={styles.startButton}>Take Quiz</Link>
+      <h1>hello</h1>
     </div>
   );
 };
