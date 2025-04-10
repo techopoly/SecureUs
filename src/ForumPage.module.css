@@ -1,4 +1,264 @@
+/* Overall container for the Forum page */
 .forumPage {
+  display: flex;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* Title of the Forum page */
+.pageTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1c1e21;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Sidebar widget containing categories */
+.widget {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin-right: 20px;
+  
+}
+
+/* Title inside the widget */
+.widgetTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* List of categories in the sidebar */
+.categoryList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categoryItem {
+  font-size: 16px;
+  color: #555;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.categoryItem:hover {
+  background-color: #e9e9e9;
+}
+
+/* Main area for the list of posts */
+.postList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  flex: 1; /* Allow post list to take the remaining space */
+}
+
+/* Card for each post */
+.postCard {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.postCard:hover {
+  transform: scale(1.02);
+}
+
+/* Header of each post card */
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* User profile info inside post header */
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userProfilePic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.userDetails {
+  font-size: 14px;
+}
+
+.userName {
+  font-weight: bold;
+  color: #1877f2;
+}
+
+.postTime {
+  color: #666;
+}
+
+/* Options button in the post header */
+.postOptions {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Title of the post */
+.postTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1877f2;
+  margin-bottom: 10px;
+}
+
+/* Content of the post */
+.postContent {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Image inside the post */
+.postImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Actions buttons like Like, Comment, Share */
+.postActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Buttons for Like, Comment, and Share */
+.actionButton {
+  background-color: #6a6a6a;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+.actionButton:hover {
+  background-color: #e4e6eb;
+}
+
+/* Comment section inside each post */
+.comments {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.comment {
+  margin: 5px 0;
+}
+
+/* Link to show more comments */
+.moreComments {
+  color: #1877f2;
+  cursor: pointer;
+}
+
+/* Button to show more details (open modal) */
+.moreButton {
+  background-color: #1877f2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+.moreButton:hover {
+  background-color: #145a8d;
+}
+
+/* Styling for the modal backdrop */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Styling for the modal content */
+.modalContent {
+  background-color: #e9e9e9;
+  padding: 30px;
+  width: 80%;
+  height: 70%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Comment section inside modal */
+.commentSection {
+  max-height: 400px;
+  margin-top: 20px;
+}
+
+/* Styling for the "Post a Comment" textarea and button */
+.addComment textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.addComment button {
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.addComment button:hover {
+  background-color: #145a8d;
+}
+
+
+
+
+
+/* .forumPage {
     padding: 30px;
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -84,7 +344,12 @@
   .postCard:hover {
     transform: scale(1.02);
   }
+   */
+
+  /* Rest of the styling for posts as before */
   
+
+/* 
   .postHeader {
     display: flex;
     justify-content: space-between;
@@ -191,4 +456,4 @@
   .moreButton:hover {
     background-color: #145a8d;
   }
-  
+   */

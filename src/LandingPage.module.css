@@ -1,48 +1,64 @@
 .landingPage {
-    text-align: center;
-    padding: 50px;
-    background-color: #f4f4f4; /* Light gray background */
-    min-height: 100vh;
-  }
-  
-  .header {
-    margin-bottom: 40px;
-  }
-  
-  .header h1 {
-    font-size: 48px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 20px;
-    color: #666;
-  }
-  
-  .content {
-    font-size: 18px;
-    color: #444;
-    margin-top: 30px;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  .button {
-    display: inline-block;
-    margin: 10px 20px;
-    padding: 15px 30px;
-    background-color: #1877f2;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #145a8d;
-  }
-  
+  padding: 50px;
+  background-color: #f4f4f4; /* Light gray background */
+  min-height: 100vh;
+}
+
+.section {
+  display: flex;
+  align-items: center; /* Vertically align the content */
+  justify-content: center;
+  margin-bottom: 50px; /* Space between sections */
+  padding: 20px;
+  background-color: #fff; /* White background for sections */
+  border-radius: 8px; /* Rounded corners for sections */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+}
+
+.sectionContent {
+  flex: 1;  /* Allow text to take up available space */
+  padding-left: 20px; /* Space between text and image */
+  text-align: left; /* Align text to the left */
+}
+
+h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.sectionImage {
+  width: 30%; /* Set image width to 45% of the container */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #1877f2;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #145a8d;
+}
