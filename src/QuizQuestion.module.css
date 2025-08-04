@@ -1,0 +1,104 @@
+.questionCard {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .questionHeader {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px;
+  }
+  
+  .questionText {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .optionsContainer {
+    padding: 24px;
+  }
+  
+  .optionButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+  
+  .optionButton:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+  
+  .optionButton.selected {
+    background: #e0f2fe;
+    border-color: #0284c7;
+    color: #0c4a6e;
+  }
+  
+  .optionButton:last-child {
+    margin-bottom: 0;
+  }
+  
+  .optionLetter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e2e8f0;
+    color: #64748b;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+  
+  .optionButton.selected .optionLetter {
+    background: #0284c7;
+    color: white;
+  }
+  
+  .optionText {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 768px) {
+    .questionHeader {
+      padding: 20px;
+    }
+    
+    .questionText {
+      font-size: 1.1rem;
+    }
+    
+    .optionsContainer {
+      padding: 20px;
+    }
+    
+    .optionButton {
+      padding: 14px 16px;
+    }
+    
+    .optionLetter {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+    }
+  }
+  

@@ -1,46 +1,181 @@
-.card {
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 22%;
-    cursor: pointer;
+.quizCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.quizCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cardHeader {
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.quizTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.difficultyBadge {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quizMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.questionCount,
+.estimatedTime {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardBody {
+  padding: 16px 24px;
+}
+
+.quizDescription {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.progressSection {
+  margin-bottom: 16px;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progressLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.progressText {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.progressBarContainer {
+  background-color: #f1f5f9;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progressPercentage {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.scoreSection {
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.scoreDisplay {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scoreLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.scoreValue {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.scorePercentage {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.cardFooter {
+  padding: 16px 24px 24px;
+}
+
+.startButton {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.startButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 480px) {
+  .titleSection {
+    flex-direction: column;
+    gap: 8px;
   }
   
-  .card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .quizTitle {
+    margin-right: 0;
   }
   
-  .card p {
-    font-size: 14px;
+  .quizMeta {
+    flex-direction: column;
+    gap: 8px;
   }
-  
-  .progressContainer {
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    height: 10px;
-    margin: 10px 0;
-  }
-  
-  .progressBar {
-    height: 100%;
-    border-radius: 8px;
-  }
-  
-  .startButton {
-    text-decoration: none;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  
-  .startButton:hover {
-    background-color: #45a049;
-  }
-  
+}

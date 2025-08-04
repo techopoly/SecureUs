@@ -1,0 +1,351 @@
+.homePage {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 60px;
+  }
+  
+  .heroContent {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .brandName {
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .heroSubtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #e0e7ff;
+  }
+  
+  .heroDescription {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  }
+  
+  .ctaButton:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+  }
+  
+  .heroImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .securityIcon {
+    font-size: 8rem;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Mission Section */
+  .missionSection {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2d3748;
+  }
+  
+  .missionText {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #4a5568;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .statCard {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+  }
+  
+  .statLabel {
+    font-size: 1rem;
+    color: #718096;
+  }
+  
+  /* Components Section */
+  .componentsSection {
+    padding: 80px 20px;
+    background-color: white;
+  }
+  
+  .componentsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .componentCard {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .componentCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  }
+  
+  .componentIcon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .componentTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2d3748;
+  }
+  
+  .componentDescription {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  
+  .featureList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .featureList li {
+    padding: 8px 0;
+    color: #718096;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .featureList li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: bold;
+  }
+  
+  .componentButton {
+    display: inline-block;
+    background-color: #667eea;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .componentButton:hover {
+    background-color: #5a67d8;
+  }
+  
+  /* Why Section */
+  .whySection {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+  }
+  
+  .benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .benefitItem {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .benefitIcon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .benefitItem h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .benefitItem p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  
+  /* CTA Section */
+  .ctaSection {
+    padding: 80px 20px;
+    background-color: #2d3748;
+    color: white;
+    text-align: center;
+  }
+  
+  .ctaSectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .ctaDescription {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ctaButtons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .primaryCta, .secondaryCta {
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryCta {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  .primaryCta:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+  }
+  
+  .secondaryCta {
+    background-color: transparent;
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b;
+  }
+  
+  .secondaryCta:hover {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heroSection {
+      flex-direction: column;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .heroTitle {
+      font-size: 2.2rem;
+    }
+    
+    .heroSubtitle {
+      font-size: 1.1rem;
+    }
+    
+    .componentsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .sectionTitle {
+      font-size: 2rem;
+    }
+    
+    .ctaButtons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .primaryCta, .secondaryCta {
+      width: 250px;
+    }
+  }
+  
