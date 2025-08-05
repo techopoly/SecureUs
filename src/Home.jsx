@@ -172,8 +172,8 @@ const Home = () => {
           <div className={styles.testimonialsGrid}>
             <div className={styles.testimonialCard}>
               <p className={styles.testimonialText}>
-                "SecureUs gave me the confidence to transition from marketing to cybersecurity. 
-                The supportive community made all the difference!"
+                "SecureUs gave me the confidence through the supportive community
+                that made all the difference!"
               </p>
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>👩‍💼</div>
@@ -198,8 +198,7 @@ const Home = () => {
             </div>
             <div className={styles.testimonialCard}>
               <p className={styles.testimonialText}>
-                "The mentorship program connected me with amazing women leaders. 
-                I landed my dream job in cybersecurity!"
+                "The mentorship program connected me with amazing women leaders." 
               </p>
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>👩‍🔬</div>
