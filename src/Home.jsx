@@ -178,8 +178,8 @@ const Home = () => {
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>👩‍💼</div>
                 <div>
-                  <div className={styles.authorName}>Sarah Chen</div>
-                  <div className={styles.authorTitle}>Security Analyst at TechCorp</div>
+                  <div className={styles.authorName}>Arifa Nasrin</div>
+                  <div className={styles.authorTitle}>Business Communication Student</div>
                 </div>
               </div>
             </div>
@@ -191,8 +191,8 @@ const Home = () => {
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>👩‍💻</div>
                 <div>
-                  <div className={styles.authorName}>Maria Rodriguez</div>
-                  <div className={styles.authorTitle}>Penetration Tester</div>
+                  <div className={styles.authorName}>Prayttasha Saha</div>
+                  <div className={styles.authorTitle}>PhD Student at UIUC</div>
                 </div>
               </div>
             </div>
@@ -203,8 +203,8 @@ const Home = () => {
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>👩‍🔬</div>
                 <div>
-                  <div className={styles.authorName}>Aisha Patel</div>
-                  <div className={styles.authorTitle}>CISO at StartupCo</div>
+                  <div className={styles.authorName}>Samrin Iftekhar</div>
+                  <div className={styles.authorTitle}>Doctor at Square Hospital</div>
                 </div>
               </div>
             </div>
