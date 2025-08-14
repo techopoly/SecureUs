@@ -3,6 +3,7 @@ import { useAuth } from './context/AuthContext';
 import CreatePost from './CreatePost';
 import PostModal from './PostModal';
 import styles from './ForumPage.module.css';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 // Updated categories to include "My Posts"
 const categories = [
@@ -632,7 +633,7 @@ const ForumPage = () => {
   const fetchAllPosts = async () => {
     setIsLoadingPosts(true);
     try {
-      const response = await fetch('http://localhost:5000/api/forum/posts', {
+      const response = await fetch(`${API_BASE_URL}/api/forum/posts`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -670,7 +671,7 @@ const ForumPage = () => {
     setIsLoadingUserPosts(true);
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5000/api/forum/my-posts', {
+      const response = await fetch(`${API_BASE_URL}/api/forum/my-posts`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

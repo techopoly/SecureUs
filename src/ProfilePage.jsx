@@ -3,6 +3,7 @@ import { useAuth } from './context/AuthContext';
 import { Link } from 'react-router-dom';
 import CreatePost from './CreatePost';
 import styles from './ProfilePage.module.css';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const ProfilePage = () => {
   const { user, isAuthenticated, logout, isLoading } = useAuth();
@@ -32,7 +33,7 @@ const ProfilePage = () => {
     setIsLoadingPosts(true);
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5000/api/forum/my-posts', {
+      const response = await fetch(`${API_BASE_URL}/api/forum/my-posts`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -78,7 +79,7 @@ const ProfilePage = () => {
   const handleSaveProfile = async () => {
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5000/api/auth/update-profile', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/update-profile`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -121,7 +122,7 @@ const ProfilePage = () => {
     if (window.confirm('Are you sure you want to delete this post?')) {
       try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch(`http://localhost:5000/api/forum/posts/${postId}`, {
+        const response = await fetch(`${API_BASE_URL}/api/forum/posts/${postId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`,

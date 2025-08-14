@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import LoginModal from './Auth/LoginModal';
 import styles from './CreatePost.module.css';
-
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 const CreatePost = ({ onPostCreated, showAsForm = false }) => {
   const { isAuthenticated, checkAuthStatus, isLoading, hasStoredToken } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -66,7 +66,7 @@ const CreatePost = ({ onPostCreated, showAsForm = false }) => {
     
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch('http://localhost:5000/api/forum/posts', {
+      const response = await fetch(`${API_BASE_URL}/api/forum/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

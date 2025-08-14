@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import LoginModal from './Auth/LoginModal';
 import styles from './AppointmentPage.module.css';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const AppointmentPage = () => {
   const { isAuthenticated, user, hasStoredToken, checkAuthStatus } = useAuth();
@@ -27,7 +28,7 @@ const AppointmentPage = () => {
     setIsLoading(true);
     try {
       const token = localStorage.getItem('authToken');
-      const res = await fetch('http://localhost:5000/api/appointments/my', {
+      const res = await fetch(`${API_BASE_URL}/api/appointments/my`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -80,7 +81,7 @@ const AppointmentPage = () => {
         time: slot.time
       };
 
-      const res = await fetch('http://localhost:5000/api/appointments', {
+      const res = await fetch(`${API_BASE_URL}/api/appointments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
