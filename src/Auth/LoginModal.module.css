@@ -1,0 +1,198 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .modalContent {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .modalHeader {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .closeButton {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .modalBody {
+    padding: 32px 24px;
+  }
+  
+  .modalSubtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .inputLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .inputField {
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+  
+  .inputField:focus {
+    border-color: #ec4899;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+  }
+  
+  .inputField::placeholder {
+    color: #9ca3af;
+  }
+  
+  .errorMessage {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #dc2626;
+    font-size: 0.9rem;
+    margin: 8px 0;
+  }
+  
+  .submitButton {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+  }
+  
+  .submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+  }
+  
+  .submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .toggleSection {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .toggleSection p {
+    color: #64748b;
+    margin: 0;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    color: #ec4899;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 6px;
+    text-decoration: underline;
+  }
+  
+  .toggleButton:hover {
+    color: #be185d;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modalContent {
+      width: 95%;
+      margin: 10px;
+    }
+    
+    .modalBody {
+      padding: 24px 20px;
+    }
+    
+    .modalHeader {
+      padding: 20px;
+    }
+  }
+  

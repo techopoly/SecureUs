@@ -1,0 +1,456 @@
+.appointmentPage {
+  background: linear-gradient(180deg, #fdf2f8 0%, #f3e8ff 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #831843;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #831843, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Section Container */
+.sectionContainer {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(236, 72, 153, 0.1);
+}
+
+.sectionIcon {
+  font-size: 2.5rem;
+  padding: 16px;
+  background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+  border-radius: 16px;
+  border: 2px solid rgba(236, 72, 153, 0.2);
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #831843;
+  margin: 0 0 4px 0;
+}
+
+.sectionDescription {
+  color: #64748b;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Slots Container */
+.slotsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.slotCard {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f8fafc 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.slotCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.slotCard.bookedSlot {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+  border-color: #10b981;
+}
+
+.slotDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.dateIcon {
+  font-size: 1.2rem;
+}
+
+.slotTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ec4899;
+}
+
+.timeIcon {
+  font-size: 1.2rem;
+}
+
+.bookButton {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  color: white;
+}
+
+.bookButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+.bookedButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  cursor: not-allowed;
+}
+
+.bookedButton:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Appointments Grid */
+.appointmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.appointmentCard {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f8fafc 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.appointmentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.appointmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.appointmentStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusIcon {
+  font-size: 1.2rem;
+}
+
+.statusText {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.appointmentId {
+  background: rgba(236, 72, 153, 0.1);
+  color: #be185d;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.appointmentDetails {
+  margin-bottom: 20px;
+}
+
+.appointmentDate,
+.appointmentTime {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detailIcon {
+  font-size: 1.5rem;
+  padding: 8px;
+  background: rgba(236, 72, 153, 0.1);
+  border-radius: 8px;
+}
+
+.dateSubtext,
+.timeSubtext {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 4px 0 0 0;
+}
+
+.appointmentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(236, 72, 153, 0.1);
+}
+
+.expertInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.expertIcon {
+  font-size: 1.2rem;
+}
+
+.rescheduleButton {
+  background: none;
+  border: 2px solid #ec4899;
+  color: #ec4899;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rescheduleButton:hover {
+  background: #ec4899;
+  color: white;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #64748b;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ec4899;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.emptyDescription {
+  color: #64748b;
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modalContent {
+  padding: 40px;
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.warningIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 16px;
+}
+
+.modalMessage {
+  color: #64748b;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.appointmentSummary {
+  background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.appointmentSummary p {
+  margin: 8px 0;
+  color: #374151;
+}
+
+.modalNote {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+.modalButton {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appointmentPage {
+    padding: 20px 10px;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionContainer {
+    padding: 24px 20px;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .slotsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointmentsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointmentFooter {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .rescheduleButton {
+    width: 100%;
+  }
+}
