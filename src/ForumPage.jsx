@@ -3,7 +3,7 @@ import { useAuth } from './context/AuthContext';
 import CreatePost from './CreatePost';
 import PostModal from './PostModal';
 import styles from './ForumPage.module.css';
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 
 // Updated categories to include "My Posts"
 const categories = [

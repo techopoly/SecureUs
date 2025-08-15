@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext'; // ← Add AuthProvider import
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { AuthProvider } from './context/AuthContext';
 import './index.css';
 import VideoList from './VideoList';
 import Header from './Header';
@@ -14,10 +15,10 @@ import AppointmentPage from './AppointmentPage';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider> {/* ← Wrap everything with AuthProvider */}
-      <Router basename="/SecureUs/">
+    <AuthProvider>
+      <Router basename="/SecureUs">
         <div>
-          <Header /> {/* Header can now access useAuth() */}
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/video" element={<VideoList />} />

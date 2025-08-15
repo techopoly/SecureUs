@@ -3,7 +3,7 @@ import { useAuth } from './context/AuthContext';
 import { Link } from 'react-router-dom';
 import CreatePost from './CreatePost';
 import styles from './ProfilePage.module.css';
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 
 const ProfilePage = () => {
   const { user, isAuthenticated, logout, isLoading } = useAuth();

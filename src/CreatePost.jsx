@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from './context/AuthContext';
 import LoginModal from './Auth/LoginModal';
 import styles from './CreatePost.module.css';
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_APP_API_URL;
 const CreatePost = ({ onPostCreated, showAsForm = false }) => {
   const { isAuthenticated, checkAuthStatus, isLoading, hasStoredToken } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);

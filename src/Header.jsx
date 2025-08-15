@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import LoginModal from './Auth/LoginModal';
 import styles from './Header.module.css';
@@ -9,6 +9,7 @@ const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate(); // Add this
 
   // Handle login button click
   const handleLoginClick = () => {
@@ -19,6 +20,12 @@ const Header = () => {
   const handleLogout = () => {
     logout();
     setShowUserMenu(false);
+  };
+
+  // Handle profile navigation
+  const handleProfileClick = () => {
+    setShowUserMenu(false);
+    navigate('/profile'); // Use navigate instead of window.location.href
   };
 
   // Close user menu when clicking outside
@@ -69,11 +76,11 @@ const Header = () => {
               Forum
             </Link>
             <Link 
-  to="/appointments" 
-  className={`${styles.navLink} ${isActiveRoute('/appointments') ? styles.active : ''}`}
->
-  Appointments
-</Link>
+              to="/appointments" 
+              className={`${styles.navLink} ${isActiveRoute('/appointments') ? styles.active : ''}`}
+            >
+              Appointments
+            </Link>
           </nav>
 
           {/* Authentication Section */}
@@ -115,7 +122,7 @@ const Header = () => {
                     <hr className={styles.dropdownDivider} />
                     <button 
                       className={styles.dropdownItem}
-                      onClick={() => window.location.href = '/SecureUs/profile/'}
+                      onClick={handleProfileClick} // ✅ Fixed navigation
                     >
                       👤 My Profile
                     </button>
@@ -154,29 +161,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import styles from './Header.module.css';  // Import the CSS module
-
-// const Header = () => {
-//   return (
-//     <header className={styles.header}> {/* Apply header styles */}
-//       <div className={styles.logo}><Link className={styles.logo} to="/">SecureUs</Link></div> {/* Logo Text */}
-//       <nav className={styles.nav}>
-//         <ul>
-//         <li><Link to="/" className={styles.navLink}>Home</Link></li> {/* Link to home page */}
-//           <li><Link to="/video" className={styles.navLink}>Video</Link></li> {/* Link to VideoList */}
-//           <li><Link to="/quiz" className={styles.navLink}>Quiz</Link></li>
-//           <li><Link to="/forum" className={styles.navLink}>Forum</Link></li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Header;
