@@ -845,7 +845,7 @@ const ForumPage = () => {
             <div className={styles.postHeader}>
               <div className={styles.userInfo}>
                 <img 
-                  src="https://randomuser.me/api/portraits/women/56.jpg" 
+                  src="https://avatar.iran.liara.run/public/girl" 
                   alt="User" 
                   className={styles.userProfilePic} 
                 />
@@ -977,7 +977,7 @@ const ForumPage = () => {
                     <div className={styles.postHeader}>
                       <div className={styles.userInfo}>
                         <img 
-                          src="https://randomuser.me/api/portraits/women/56.jpg" 
+                          src="https://avatar.iran.liara.run/public/girl" 
                           alt="User" 
                           className={styles.userProfilePic} 
                         />

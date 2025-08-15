@@ -203,7 +203,7 @@ const ProfilePage = () => {
             <div className={styles.avatarSection}>
               <div className={styles.avatarContainer}>
                 <img 
-                  src="https://randomuser.me/api/portraits/women/75.jpg" 
+                  src="https://avatar.iran.liara.run/public/girl" 
                   alt="Profile" 
                   className={styles.profileAvatar}
                 />
