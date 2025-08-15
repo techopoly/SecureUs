@@ -10,7 +10,7 @@ const VideoList = () => {
       category: "Social Media Security Awareness",
       icon: "📱",
       description: "Master privacy settings and stay safe on social platforms",
-      gradient: "linear-gradient(135deg, #ec4899 0%, #be185d 100%)",
+      gradient: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
       videos: [
         { 
           videoUrl: 'https://youtu.be/euC9_23rjrc?si=2R-Nvf8ANr_wr1mS', 
@@ -43,7 +43,7 @@ const VideoList = () => {
       category: "Safe Browsing Awareness",
       icon: "🌐",
       description: "Browse confidently with smart security practices",
-      gradient: "linear-gradient(135deg, #f97316 0%, #ea580c 100%)",
+      gradient: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
       videos: [
         { 
           videoUrl: 'https://www.youtube.com/shorts/Un9ZFoJ2vPE', 
