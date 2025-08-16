@@ -604,11 +604,14 @@ const ForumPage = () => {
   const [userPosts, setUserPosts] = useState([]);
   const [isLoadingPosts, setIsLoadingPosts] = useState(false);
   const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
+  const [myPostCount, setMyPostCount] = useState(0);
 
   // Fetch all posts from database when component loads
   useEffect(() => {
     fetchAllPosts();
-  }, []);
+    fetchUserPosts();
+    console.log('ForumPage mounted');
+  }, [isAuthenticated]);
 
   // Fetch user's posts when "My Posts" category is selected
   useEffect(() => {
@@ -922,7 +925,7 @@ const ForumPage = () => {
                   <span className={styles.categoryIcon}>{category.icon}</span>
                   <span className={styles.categoryName}>{category.name}</span>
                   <span className={styles.postCount}>
-                    {getPostCount(category.id)}
+                    {getPostCount(category.id) > 0 ? `(${getPostCount(category.id)})` : '...'}
                   </span>
                 </button>
               </li>
